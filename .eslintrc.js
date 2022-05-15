@@ -5,20 +5,20 @@ module.exports = {
     node: true,
   },
   extends: [
-    "plugin:react/recommended",
-    "airbnb",
+    'plugin:react/recommended',
+    'airbnb',
   ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   plugins: [
-    "react",
+    'react',
   ],
   rules: {
-    "prettier/prettier": ["error", { singleQuote: true }],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
   },
 };
