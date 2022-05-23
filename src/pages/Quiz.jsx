@@ -6,9 +6,9 @@ function Quiz() {
 
   function checkQuestion() {
     if (question) {
-      alert('Resposta correta');
+      console.log('Resposta correta');
     } else {
-      alert('Resposta errada');
+      console.log('Resposta errada');
     }
   }
 
@@ -25,25 +25,41 @@ function Quiz() {
           <div>
             <ul>
               <li className="list">
-                <input type="checkbox" onChange={() => setQuestion(false)} />
+                <input
+                  type="radio"
+                  name="answer"
+                  onChange={() => setQuestion(false)}
+                />
                 <p>Burro Jair Bolsonaro</p>
               </li>
               <li className="list">
-                <input type="checkbox" onChange={() => setQuestion(true)} />
+                <input
+                  type="radio"
+                  name="answer"
+                  onChange={() => setQuestion(true)}
+                />
                 <p>Pedro Álvares Cabral</p>
               </li>
               <li className="list">
-                <input type="checkbox" onChange={() => setQuestion(false)} />
+                <input
+                  type="radio"
+                  name="answer"
+                  onChange={() => setQuestion(false)}
+                />
                 <p>Ex-presidiário Lula</p>
               </li>
               <li className="list">
-                <input type="checkbox" onChange={() => setQuestion(false)} />
+                <input
+                  type="radio"
+                  name="answer"
+                  onChange={() => setQuestion(false)}
+                />
                 <p>Cristóvão Colombo</p>
               </li>
             </ul>
           </div>
           <div>
-            <button type="button" onClick={checkQuestion()}>
+            <button type="button" onClick={() => checkQuestion()}>
               Check
             </button>
           </div>
